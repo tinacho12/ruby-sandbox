@@ -16,7 +16,7 @@ pp some_random_input
 if some_random_input.class == String
   pp some_random_input.downcase
 elsif some_random_input.class == Time
-  pp some_random_input.day
+  puts some_random_input.strftime("%A").downcase
 elsif some_random_input.class == Integer
   if some_random_input % 2 == 0
     pp some_random_input.to_s + " is even"
