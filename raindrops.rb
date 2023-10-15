@@ -12,19 +12,27 @@ integers = [1, 21, 35, 105]
 integer = integers.sample
 # write your program below
 
-# Check factors
 pp integer
 
-if integer % 3 == 0 
-  puts "Pling"
-elsif integer % 5 == 0
-  puts "Plang"
-elsif integer % 7 == 0
-  puts "Plong"
-else
-  puts integer
+[3,5,7].each do |divisor|
+  if integer % divisor == 0
+    ["Pling","Plang","Plong"].each do |sound|
+      return sound
+    end
+  end
 end
 
-def leap_year?(year)
-  return (year % 4 == 0) && ((year % 100 != 0) || (year % 400 == 0))
+=begin
+def divisible_by_3?(integer)
+  return integer % 3 == 0
 end
+
+def divisible_by_5?(integer)
+  return integer % 5 == 0
+end
+
+def divisible_by_7?(integer)
+  return integer % 7 == 0
+end
+
+=end
