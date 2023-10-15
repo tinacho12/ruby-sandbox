@@ -14,15 +14,16 @@ integer = integers.sample
 
 pp integer
 
+=begin
 [3,5,7].each do |divisor|
   if integer % divisor == 0
     ["Pling","Plang","Plong"].each do |sound|
-      return sound
+      puts sound
     end
   end
 end
+=end
 
-=begin
 def divisible_by_3?(integer)
   return integer % 3 == 0
 end
@@ -35,4 +36,14 @@ def divisible_by_7?(integer)
   return integer % 7 == 0
 end
 
-=end
+if divisible_by_3?(integer)
+  puts "Pling"
+end
+
+if divisible_by_5?(integer)
+  puts "Plang"
+end
+
+if divisible_by_7?(integer)
+  puts "Plong"
+end
