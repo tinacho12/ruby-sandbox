@@ -11,5 +11,7 @@ pp secret
 #secret = secret.gsub({ "1" => "a", "2"=> "e", "3" => "i", "4" => "o", "5" => "u"})
 #puts secret
 
-secret = secret.tr('12345', 'aeiou')
-puts secret
+#secret = secret.tr('12345', 'aeiou')
+#puts secret
+
+pp secret.gsub(/['1']/i, 'a').gsub(/['2']/i, 'e').gsub(/['3']/i, 'i').gsub(/['4']/i, 'o').gsub(/['5']/i, 'u')

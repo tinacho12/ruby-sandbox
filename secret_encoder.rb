@@ -18,4 +18,4 @@ secret = secret.gsub("u", "5")
 puts secret
 =end
 
-pp secret.gsub(/['1']/i, 'a').gsub(/['2']/i, 'e').gsub(/['3']/i, 'i').gsub(/['4']/i, 'o').gsub(/['5']/i, 'u')
+pp secret.gsub(/[a]/i, '1').gsub(/[e]/i, '2').gsub(/[i]/i, '3').gsub(/[o]/i, '4').gsub(/[u]/i, '5')
