@@ -12,17 +12,19 @@ code = { :a => "1", :e => "2", :i => "3", :o => "4", :u => "5" }
 
 number_of_codes = 0
 
-while number_of_codes < code.count
-# if Nth key exists in the string, replace key with value
-  if code.keys[number_of_codes] in secret
-    #pp code.values[number_of_codes]
-    code.keys[number_of_codes] = code.values[number_of_codes]
-    pp secret
-  else
-    pp "no"
-  end
-  number_of_codes = number_of_codes +1
+if code.keys[number_of_codes] in secret
+  secret.gsub(code.keys, code.values)
 end
-#pp code.keys[0]
-#pp code.fetch(:a)
-#pp code.values[0]
+#appears_in_secret = code.keys[number_of_codes] in secret
+
+#while number_of_codes < code.count
+
+#if appears_in_secret
+#  pp "yes this letter is in the secret"
+  #pp secret.gsub(#{appears_in_secret}, "")
+#  end
+#  number_of_codes = number_of_codes + 1
+#end
+
+#pp appears_in_secret
+pp secret
