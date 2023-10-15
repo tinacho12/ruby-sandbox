@@ -24,6 +24,8 @@ pp integer
 end
 =end
 
+raindrops = []
+
 def divisible_by_3?(integer)
   return integer % 3 == 0
 end
@@ -37,13 +39,15 @@ def divisible_by_7?(integer)
 end
 
 if divisible_by_3?(integer)
-  puts "Pling"
+  raindrops.push "Pling"
 end
 
 if divisible_by_5?(integer)
-  puts "Plang"
+  raindrops.push "Plang"
 end
 
 if divisible_by_7?(integer)
-  puts "Plong"
+  raindrops.push "Plong"
 end
+
+pp raindrops.join
