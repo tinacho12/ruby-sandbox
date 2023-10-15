@@ -10,14 +10,14 @@ inputs = [
 numbers = inputs.sample
 pp numbers
 # write your program below
-# if even, remove from list
-# add up the remaining ones
 
+# if even, remove from list
 numbers.each do |n|
   if n.to_i % 2 == 0
     numbers -= [n]
   end
 end
 
+# add up the remaining ones
 numbers = numbers.map(&:to_i)
 pp numbers.sum
