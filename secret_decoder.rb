@@ -8,23 +8,8 @@ secret = [
 pp secret
 # write your program below
 
-code = { :a => "1", :e => "2", :i => "3", :o => "4", :u => "5" }
+#secret = secret.gsub({ "1" => "a", "2"=> "e", "3" => "i", "4" => "o", "5" => "u"})
+#puts secret
 
-number_of_codes = 0
-
-if code.keys[number_of_codes] in secret
-  secret.gsub(code.keys, code.values)
-end
-#appears_in_secret = code.keys[number_of_codes] in secret
-
-#while number_of_codes < code.count
-
-#if appears_in_secret
-#  pp "yes this letter is in the secret"
-  #pp secret.gsub(#{appears_in_secret}, "")
-#  end
-#  number_of_codes = number_of_codes + 1
-#end
-
-#pp appears_in_secret
-pp secret
+secret = secret.tr('12345', 'aeiou')
+puts secret
